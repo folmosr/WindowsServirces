@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentosElectronicos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ContabilidadCirrusCo.WCF/DocumentosElectronicos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentosElectronicos_Guardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Guardar" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_Guardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_Emitir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Emitir" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_Emitir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmitirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerPorFiltro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorFiltro" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerPorFiltro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorFiltroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_AceptarComercialmenteDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:AceptarComercialmenteDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_AceptarComercialmenteDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AceptarComercialmenteDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_RechazarComercialmenteDocumentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarComercialmenteDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_RechazarComercialmenteDocumentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarComercialmenteDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_EditarEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarEstado" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_EditarEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_CargarXMLCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarXMLCompra" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_CargarXMLCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarXMLCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_CargarPDFCompra_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarPDFCompra" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_CargarPDFCompra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarPDFCompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ConsultaEstadoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaEstadoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ConsultaEstadoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaEstadoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ImportarVentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportarVentas" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ImportarVentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportarVentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ImportarComprasManuales_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportarComprasManuales" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ImportarComprasManuales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportarComprasManualesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerFoliosPorFiltro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFoliosPorFiltro" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerFoliosPorFiltro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFoliosPorFiltroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ActualizarFoliosDIAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarFoliosDIAN" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ActualizarFoliosDIAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarFoliosDIANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerBitacoraPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBitacoraPorId" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerBitacoraPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBitacoraPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerDocumentosPendientesEnvio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentosPendientesEnvio" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerDocumentosPendientesEnvio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentosPendientesEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_PostearDocumentoPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostearDocumentoPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_PostearDocumentoPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostearDocumentoPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerEnviosCorreoPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEnviosCorreoPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerEnviosCorreoPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEnviosCorreoPendienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_EnviarCorreoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_EnviarCorreoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ReenviarCorreoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReenviarCorreoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ReenviarCorreoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReenviarCorreoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_DocumentosPendientesDIAN_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosPendientesDIAN" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_DocumentosPendientesDIAN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentosPendientesDIANResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerXML_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerXML" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_ObtenerXML_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_EditarEstadoComercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarEstadoComercial" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_EditarEstadoComercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarEstadoComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_GenerarPDF_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarPDF" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_GenerarPDF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_GenerarXLS_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarXLS" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentosElectronicos_GenerarXLS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarXLSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentosElectronicos">
+    <wsdl:operation name="Guardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/Guardar" message="tns:IDocumentosElectronicos_Guardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/GuardarResponse" message="tns:IDocumentosElectronicos_Guardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Emitir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/Emitir" message="tns:IDocumentosElectronicos_Emitir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EmitirResponse" message="tns:IDocumentosElectronicos_Emitir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorFiltro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerPorFiltro" message="tns:IDocumentosElectronicos_ObtenerPorFiltro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerPorFiltroResponse" message="tns:IDocumentosElectronicos_ObtenerPorFiltro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AceptarComercialmenteDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/AceptarComercialmenteDocumentos" message="tns:IDocumentosElectronicos_AceptarComercialmenteDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/AceptarComercialmenteDocumentosResponse" message="tns:IDocumentosElectronicos_AceptarComercialmenteDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazarComercialmenteDocumentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/RechazarComercialmenteDocumentos" message="tns:IDocumentosElectronicos_RechazarComercialmenteDocumentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/RechazarComercialmenteDocumentosResponse" message="tns:IDocumentosElectronicos_RechazarComercialmenteDocumentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EditarEstado" message="tns:IDocumentosElectronicos_EditarEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EditarEstadoResponse" message="tns:IDocumentosElectronicos_EditarEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarXMLCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/CargarXMLCompra" message="tns:IDocumentosElectronicos_CargarXMLCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/CargarXMLCompraResponse" message="tns:IDocumentosElectronicos_CargarXMLCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarPDFCompra">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/CargarPDFCompra" message="tns:IDocumentosElectronicos_CargarPDFCompra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/CargarPDFCompraResponse" message="tns:IDocumentosElectronicos_CargarPDFCompra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEstadoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ConsultaEstadoDocumento" message="tns:IDocumentosElectronicos_ConsultaEstadoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ConsultaEstadoDocumentoResponse" message="tns:IDocumentosElectronicos_ConsultaEstadoDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportarVentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ImportarVentas" message="tns:IDocumentosElectronicos_ImportarVentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ImportarVentasResponse" message="tns:IDocumentosElectronicos_ImportarVentas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportarComprasManuales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ImportarComprasManuales" message="tns:IDocumentosElectronicos_ImportarComprasManuales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ImportarComprasManualesResponse" message="tns:IDocumentosElectronicos_ImportarComprasManuales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFoliosPorFiltro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerFoliosPorFiltro" message="tns:IDocumentosElectronicos_ObtenerFoliosPorFiltro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerFoliosPorFiltroResponse" message="tns:IDocumentosElectronicos_ObtenerFoliosPorFiltro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarFoliosDIAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ActualizarFoliosDIAN" message="tns:IDocumentosElectronicos_ActualizarFoliosDIAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ActualizarFoliosDIANResponse" message="tns:IDocumentosElectronicos_ActualizarFoliosDIAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBitacoraPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerBitacoraPorId" message="tns:IDocumentosElectronicos_ObtenerBitacoraPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerBitacoraPorIdResponse" message="tns:IDocumentosElectronicos_ObtenerBitacoraPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentosPendientesEnvio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerDocumentosPendientesEnvio" message="tns:IDocumentosElectronicos_ObtenerDocumentosPendientesEnvio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerDocumentosPendientesEnvioResponse" message="tns:IDocumentosElectronicos_ObtenerDocumentosPendientesEnvio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostearDocumentoPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/PostearDocumentoPendiente" message="tns:IDocumentosElectronicos_PostearDocumentoPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/PostearDocumentoPendienteResponse" message="tns:IDocumentosElectronicos_PostearDocumentoPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEnviosCorreoPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerEnviosCorreoPendiente" message="tns:IDocumentosElectronicos_ObtenerEnviosCorreoPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerEnviosCorreoPendienteResponse" message="tns:IDocumentosElectronicos_ObtenerEnviosCorreoPendiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EnviarCorreoDocumento" message="tns:IDocumentosElectronicos_EnviarCorreoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EnviarCorreoDocumentoResponse" message="tns:IDocumentosElectronicos_EnviarCorreoDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReenviarCorreoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ReenviarCorreoDocumento" message="tns:IDocumentosElectronicos_ReenviarCorreoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ReenviarCorreoDocumentoResponse" message="tns:IDocumentosElectronicos_ReenviarCorreoDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosPendientesDIAN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/DocumentosPendientesDIAN" message="tns:IDocumentosElectronicos_DocumentosPendientesDIAN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/DocumentosPendientesDIANResponse" message="tns:IDocumentosElectronicos_DocumentosPendientesDIAN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerXML">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerXML" message="tns:IDocumentosElectronicos_ObtenerXML_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/ObtenerXMLResponse" message="tns:IDocumentosElectronicos_ObtenerXML_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarEstadoComercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EditarEstadoComercial" message="tns:IDocumentosElectronicos_EditarEstadoComercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/EditarEstadoComercialResponse" message="tns:IDocumentosElectronicos_EditarEstadoComercial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarPDF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/GenerarPDF" message="tns:IDocumentosElectronicos_GenerarPDF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/GenerarPDFResponse" message="tns:IDocumentosElectronicos_GenerarPDF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarXLS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDocumentosElectronicos/GenerarXLS" message="tns:IDocumentosElectronicos_GenerarXLS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDocumentosElectronicos/GenerarXLSResponse" message="tns:IDocumentosElectronicos_GenerarXLS_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IDocumentosElectronicos" type="tns:IDocumentosElectronicos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Guardar">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/Guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Emitir">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/Emitir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorFiltro">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ObtenerPorFiltro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AceptarComercialmenteDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/AceptarComercialmenteDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechazarComercialmenteDocumentos">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/RechazarComercialmenteDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarEstado">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/EditarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarXMLCompra">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/CargarXMLCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPDFCompra">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/CargarPDFCompra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaEstadoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ConsultaEstadoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarVentas">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ImportarVentas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarComprasManuales">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ImportarComprasManuales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFoliosPorFiltro">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ObtenerFoliosPorFiltro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarFoliosDIAN">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ActualizarFoliosDIAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBitacoraPorId">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ObtenerBitacoraPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentosPendientesEnvio">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ObtenerDocumentosPendientesEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostearDocumentoPendiente">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/PostearDocumentoPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEnviosCorreoPendiente">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ObtenerEnviosCorreoPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/EnviarCorreoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReenviarCorreoDocumento">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ReenviarCorreoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentosPendientesDIAN">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/DocumentosPendientesDIAN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerXML">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/ObtenerXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarEstadoComercial">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/EditarEstadoComercial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarPDF">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/GenerarPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarXLS">
+      <soap:operation soapAction="http://tempuri.org/IDocumentosElectronicos/GenerarXLS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentosElectronicos">
+    <wsdl:port name="IDocumentosElectronicos" binding="tns:IDocumentosElectronicos">
+      <soap:address location="http://localhost/ContabilidadCirrusCo.WCF/DocumentosElectronicos.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
