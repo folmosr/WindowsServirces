@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SujetoContable" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/ContabilidadCirrusCo.WCF/SujetoContable.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISujetoContable_ObtenerPorSistemaComputacionalId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorSistemaComputacionalId" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorSistemaComputacionalId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorSistemaComputacionalIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorFiltro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorFiltro" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorFiltro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorFiltroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_Insertar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertar" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_Insertar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_Actualizar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Actualizar" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_Actualizar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorId" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorSistemaComputacioalIdyRut_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorSistemaComputacioalIdyRut" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorSistemaComputacioalIdyRut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorSistemaComputacioalIdyRutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_AplicaIFRS_InputMessage">
+    <wsdl:part name="parameters" element="tns:AplicaIFRS" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_AplicaIFRS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AplicaIFRSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorSistemaComputacionalIdSinIntegracion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorSistemaComputacionalIdSinIntegracion" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorSistemaComputacionalIdSinIntegracion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorSistemaComputacionalIdSinIntegracionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerAPI_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAPI" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerAPI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAPIResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorNit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorNit" />
+  </wsdl:message>
+  <wsdl:message name="ISujetoContable_ObtenerPorNit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorNitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISujetoContable">
+    <wsdl:operation name="ObtenerPorSistemaComputacionalId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacionalId" message="tns:ISujetoContable_ObtenerPorSistemaComputacionalId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacionalIdResponse" message="tns:ISujetoContable_ObtenerPorSistemaComputacionalId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorFiltro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorFiltro" message="tns:ISujetoContable_ObtenerPorFiltro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorFiltroResponse" message="tns:ISujetoContable_ObtenerPorFiltro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/Insertar" message="tns:ISujetoContable_Insertar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/InsertarResponse" message="tns:ISujetoContable_Insertar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/Actualizar" message="tns:ISujetoContable_Actualizar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ActualizarResponse" message="tns:ISujetoContable_Actualizar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/Eliminar" message="tns:ISujetoContable_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/EliminarResponse" message="tns:ISujetoContable_Eliminar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorId" message="tns:ISujetoContable_ObtenerPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorIdResponse" message="tns:ISujetoContable_ObtenerPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorSistemaComputacioalIdyRut">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacioalIdyRut" message="tns:ISujetoContable_ObtenerPorSistemaComputacioalIdyRut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacioalIdyRutResponse" message="tns:ISujetoContable_ObtenerPorSistemaComputacioalIdyRut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AplicaIFRS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/AplicaIFRS" message="tns:ISujetoContable_AplicaIFRS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/AplicaIFRSResponse" message="tns:ISujetoContable_AplicaIFRS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorSistemaComputacionalIdSinIntegracion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacionalIdSinIntegracion" message="tns:ISujetoContable_ObtenerPorSistemaComputacionalIdSinIntegracion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacionalIdSinIntegracionResponse" message="tns:ISujetoContable_ObtenerPorSistemaComputacionalIdSinIntegracion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAPI">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerAPI" message="tns:ISujetoContable_ObtenerAPI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerAPIResponse" message="tns:ISujetoContable_ObtenerAPI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorNit">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorNit" message="tns:ISujetoContable_ObtenerPorNit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISujetoContable/ObtenerPorNitResponse" message="tns:ISujetoContable_ObtenerPorNit_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ISujetoContable" type="tns:ISujetoContable">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerPorSistemaComputacionalId">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacionalId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorFiltro">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerPorFiltro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertar">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/Insertar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/Actualizar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/Eliminar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorId">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorSistemaComputacioalIdyRut">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacioalIdyRut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AplicaIFRS">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/AplicaIFRS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorSistemaComputacionalIdSinIntegracion">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerPorSistemaComputacionalIdSinIntegracion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAPI">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerAPI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorNit">
+      <soap:operation soapAction="http://tempuri.org/ISujetoContable/ObtenerPorNit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SujetoContable">
+    <wsdl:port name="ISujetoContable" binding="tns:ISujetoContable">
+      <soap:address location="http://localhost/ContabilidadCirrusCo.WCF/SujetoContable.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

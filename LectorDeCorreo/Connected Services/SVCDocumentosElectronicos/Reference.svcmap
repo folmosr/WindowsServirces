@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9a1493e6-e121-4064-a69e-5d6919562b5e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ContabilidadCirrusCo.WCF/DocumentosElectronicos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentosElectronicos.xsd" MetadataType="Schema" ID="a1fe609b-0282-4a5a-ab98-801f9e1764df" SourceId="1" SourceUrl="http://localhost/ContabilidadCirrusCo.WCF/DocumentosElectronicos.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentosElectronicos.disco" MetadataType="Disco" ID="b430801d-1687-4257-b37d-376efd8dd89b" SourceId="1" SourceUrl="http://localhost/ContabilidadCirrusCo.WCF/DocumentosElectronicos.svc?disco" />
+    <MetadataFile FileName="DocumentosElectronicos.wsdl" MetadataType="Wsdl" ID="96faeab3-74e7-4cf8-b019-ffc9347aa02a" SourceId="1" SourceUrl="http://localhost/ContabilidadCirrusCo.WCF/DocumentosElectronicos.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

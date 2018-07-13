@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f9c2947d-c360-426d-86bc-3578b8922ee6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ContabilidadCirrusCo.WCF/SujetoContable.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SujetoContable.disco" MetadataType="Disco" ID="3a350119-fd33-4e98-81a8-374613ac7cd2" SourceId="1" SourceUrl="http://localhost/ContabilidadCirrusCo.WCF/SujetoContable.svc?disco" />
+    <MetadataFile FileName="SujetoContable.xsd" MetadataType="Schema" ID="17aaef51-d9dc-4734-8157-48070281f879" SourceId="1" SourceUrl="http://localhost/ContabilidadCirrusCo.WCF/SujetoContable.svc?xsd=xsd0" />
+    <MetadataFile FileName="SujetoContable.wsdl" MetadataType="Wsdl" ID="ca8ccb75-f81f-42b4-a872-ef83d8c496fd" SourceId="1" SourceUrl="http://localhost/ContabilidadCirrusCo.WCF/SujetoContable.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

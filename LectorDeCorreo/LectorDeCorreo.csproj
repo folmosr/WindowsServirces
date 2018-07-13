@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{792B4E0E-0F4F-4DC0-A110-04F9996376C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LectorDeCorreo</RootNamespace>
+    <AssemblyName>LectorDeCorreo</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MailKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.0.5\lib\net45\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Enterprise Library 5.0\Bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.0.5\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\SVCDocumentosElectronicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SVCSujetoContable\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="Producer.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioEmailReader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServicioEmailReader.Designer.cs">
+      <DependentUpon>ServicioEmailReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\SVCDocumentosElectronicos\DocumentosElectronicos.wsdl" />
+    <None Include="Connected Services\SVCDocumentosElectronicos\DocumentosElectronicos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.AceptarComercialmenteDocumentosResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ActualizarFoliosDIANResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.CargarPDFCompraResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.CargarXMLCompraResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ConsultaEstadoDocumentoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.DocumentosPendientesDIANResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.EditarEstadoComercialResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.EditarEstadoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.EliminarPDFCompraResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.EmitirResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.EnviarCorreoDocumentoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.GenerarPDFReferenciasResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.GenerarPDFResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.GenerarXLSResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.GuardarResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ImportarComprasManualesResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ImportarVentasResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.InsertarBitacoraResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfArrayOfByte1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfBitacora1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfBoolean1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfDocumentoElectronico1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfDocumentoResultado1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfEnviosDeDocumentosPendiente1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfEnviosPendientesEnDIAN1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfEnviosPendientesPosteoDIAN1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfEstadoDocumento1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfPendienteAceptacionComercial1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.MensajeWCFOfResolucion1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerBitacoraResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerDocumentosPendientesEnvioResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerEnviosCorreoPendienteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerFoliosPorFiltroResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerPendientesOKComercialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerPorFiltroResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerPorIdResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ObtenerXMLResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.PostearDocumentoPendienteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.RechazarComercialmenteDocumentosResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCDocumentosElectronicos\LectorDeCorreo.SVCDocumentosElectronicos.ReenviarCorreoDocumentoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ActualizarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.AplicaIFRSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.EliminarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.InsertarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.MensajeWCFOfBoolean.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.MensajeWCFOfSujetoContable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerAPIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerPorFiltroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerPorNitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerPorSistemaComputacioalIdyRutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerPorSistemaComputacionalIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\LectorDeCorreo.SVCSujetoContable.ObtenerPorSistemaComputacionalIdSinIntegracionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SVCSujetoContable\SujetoContable.wsdl" />
+    <None Include="Connected Services\SVCSujetoContable\SujetoContable.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SVCDocumentosElectronicos\" />
+    <WCFMetadataStorage Include="Connected Services\SVCSujetoContable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCDocumentosElectronicos\DocumentosElectronicos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCDocumentosElectronicos\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCDocumentosElectronicos\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCDocumentosElectronicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCSujetoContable\SujetoContable.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCSujetoContable\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCSujetoContable\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SVCSujetoContable\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ObtenerPorSistemaComputacionalId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="sistemaComputacionalId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorSistemaComputacionalIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPorSistemaComputacionalIdResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MensajeWCFOfSujetoContable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoError" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Contenido" type="tns:ArrayOfSujetoContable" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MensajeError" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MensajeHumano" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSujetoContable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SujetoContable" nillable="true" type="tns:SujetoContable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SujetoContable">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdTributario" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DvIdTributario" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoDePersona" type="tns:TiposDePersona" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RazonSocial" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PrimerNombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SegundoNombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ApellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ApellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Telefono" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eMail" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="GiroComercial" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumeroResolucion" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ResponsableResolucion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NombreContador" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CedulaContador" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SistemaComputacional" type="tns:SistemaComputacional" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Region" type="tns:Region" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Ciudad" type="tns:Ciudad" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ActividadEconomica" type="tns:ActividadEconomica" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Moneda" type="tns:Moneda" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PlanCuenta" type="tns:PlanDeCuentas" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Regimen" type="tns:Regimen" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ResponsableIVA" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eMailOrigenEnvioFacturas" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eMailCopiaEnvioFacturas" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="eMailCuerpoEnvioFacturas" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsPlanEmpresa" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NombreRepresentanteLegal" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CedulaRepresentanteLegal" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoDeIdentificacion" type="tns:TipoDeIdentificacion" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NombreRevisorFiscal" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CedulaRevisorFiscal" type="xs:long" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Movimientos" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EjecutarHistorico" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PlanDeCuentaIdAnterior" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TiposDePersona">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoDian" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SistemaComputacional">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Cliente" type="tns:Cliente" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoSistemaComputacional" type="tns:TipoSistemaComputacional" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumeroSerie" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Cliente">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Rut" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DigitoVerificador" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RazonSocial" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TipoSistemaComputacional">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Region">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoDepartamento" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PaisId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Ciudad">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoMunicipio" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Region" type="tns:Region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActividadEconomica">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Moneda">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CantidadDecimales" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsPorDefecto" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoDian" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlanDeCuentas">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SistemaComputacional" type="tns:SistemaComputacional" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ManejaCuentasImportacion" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ManejaCuentasExportacion" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsNIIF" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PlanCuentaNIIF" type="tns:PlanDeCuentas" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Cuentas" type="tns:ArrayOfCuenta" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BloqueadoEliminacion" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Es_Plantilla" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdPlanDeCuentaHerencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cuenta" nillable="true" type="tns:Cuenta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Cuenta">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsGrupo" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsSubgrupo" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsMayor" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsSubcuenta" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsAnalisis" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsAuxiliar" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RequiereCentroCosto" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="PlanCuenta" type="tns:PlanDeCuentas" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CuentaRelacionada" type="tns:Cuenta" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RequiereSucursal" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RequiereConciliacionBancaria" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoImportacion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoExportacion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoCuenta" type="tns:TipoCuenta" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ConceptoMedioMagnetico" type="tns:ConceptoMedioMagnetico" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsSubanalisis" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CuentaNIIF" type="tns:Cuenta" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsNIIF" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="BloqueadaEliminacion" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AccionPendiente" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ContentTag" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ClassName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ToolTip" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TipoParaAjuste" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EsVenta" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TipoCuenta">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ArrastraSaldo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConceptoMedioMagnetico">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MedioMagnetico" type="tns:MedioMagnetico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MedioMagnetico">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Regimen">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoDian" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TipoDeIdentificacion">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoDian" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObtenerPorFiltro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="filtro" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="sistemaComputacionalId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorFiltroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPorFiltroResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Insertar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="entidad" type="tns:SujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="InsertarResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Actualizar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="entidad" type="tns:SujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ActualizarResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Eliminar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="entidad" type="tns:SujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="EliminarResult" type="tns:MensajeWCFOfBoolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MensajeWCFOfBoolean">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoError" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Contenido" type="tns:ArrayOfBoolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MensajeError" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="MensajeHumano" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfBoolean">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="boolean" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObtenerPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="sujetoContableId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPorIdResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorSistemaComputacioalIdyRut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="sistemaComputacionalId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="idTributario" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorSistemaComputacioalIdyRutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPorSistemaComputacioalIdyRutResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AplicaIFRS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="sujetoContableId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AplicaIFRSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="AplicaIFRSResult" type="tns:MensajeWCFOfBoolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorSistemaComputacionalIdSinIntegracion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="sistemaComputacionalId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorSistemaComputacionalIdSinIntegracionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPorSistemaComputacionalIdSinIntegracionResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAPI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="digito" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="cedulaNit" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="numeroContrato" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="codigoSujetoContable" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="cedulaNitSujetoContable" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAPIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerAPIResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorNit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="nit" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorNitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPorNitResult" type="tns:MensajeWCFOfSujetoContable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
